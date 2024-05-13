@@ -226,7 +226,7 @@ public:
                 * transform;
 
             tf::StampedTransform stampedTransform(transform, curr_stamp, reference_frame, marker_frame);
-            br.sendTransform(stampedTransform);
+            // br.sendTransform(stampedTransform);
             geometry_msgs::PoseStamped poseMsg;
             tf::poseTFToMsg(transform, poseMsg.pose);
             poseMsg.header.frame_id = reference_frame;
